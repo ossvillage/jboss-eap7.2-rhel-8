@@ -40,8 +40,8 @@ echo "unzip jboss-eap"  >> /home/$1/install.log
 sudo unzip jboss-eap-7.2.0.zip -d /opt/rh/
 
 
-#echo "Copy the standalone-azure-ha.xml from JBOSS_HOME/docs/examples/configs folder tp JBOSS_HOME/standalone/configuration folder" >> /home/$1/install.log
-#cp $JBOSS_HOME/docs/examples/configs/standalone-azure-ha.xml $JBOSS_HOME/standalone/configuration/
+echo "Copy the standalone-azure-ha.xml from JBOSS_HOME/docs/examples/configs folder tp JBOSS_HOME/standalone/configuration folder" >> /home/$1/install.log
+cp $JBOSS_HOME/docs/examples/configs/standalone-azure-ha.xml $JBOSS_HOME/standalone/configuration/
 
 echo "deploy an applicaiton " >> /home/$1/install.log
 git clone https://github.com/danieloh30/eap-session-replication.git
